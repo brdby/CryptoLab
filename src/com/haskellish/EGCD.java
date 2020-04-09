@@ -10,6 +10,14 @@ public class EGCD {
     private int old_r, old_x, old_y;
     private Result result;
 
+    public static void main(String[] args) {
+        //Testing EGCD algorithm
+        System.out.println("\nTesting EGCD with numbers 1234 and 54:");
+        EGCD egcd = new EGCD(1234, 54);
+        EGCD.Result result = egcd.getResult();
+        System.out.println(result.getResX()+" * 1234 + "+result.getResY()+" * 54 = "+result.getResD());
+    }
+
     EGCD(int a, int b){
         //initializing
         old_r = a;

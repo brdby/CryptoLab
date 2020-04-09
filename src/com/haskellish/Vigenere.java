@@ -15,6 +15,21 @@ public class Vigenere {
     //cipher table
     private char[][] table;
 
+    public static void main(String[] args) {
+        //testing encrypting/decrypting using Vigenere
+        System.out.println("Creating RUS table...");
+        Vigenere ru = new Vigenere(Vigenere.RU, Vigenere.RU_LENGTH);
+        ru.printTable();
+
+        System.out.println("\nEncrypting \"кучероввр\" using key \"родина\"");
+        String cipher = ru.encrypt("кучероввр", "родина");
+        System.out.println("Cipher - " + cipher);
+
+        System.out.println("\nDecrypting \"" + cipher + "\" using key \"родина\"");
+        String original = ru.decrypt(cipher, "родина");
+        System.out.println("Original text - " + original);
+    }
+
     /**
      * Returns default Vigenere class with the generated cipher table
      * @param tableStart char from which cipher table will be generated
@@ -41,7 +56,7 @@ public class Vigenere {
      */
     public String encrypt(String input, String key){
         char[] charInput = input.toCharArray();
-        StringBuffer output = new StringBuffer();
+        StringBuilder output = new StringBuilder();
         for (int i = 0; i < charInput.length; i++){
             char keyChar =  key.charAt(i%key.length());
             for (int j = 0; j < table.length; j++){
@@ -59,7 +74,7 @@ public class Vigenere {
      */
     public String decrypt(String input, String key){
         char[] charInput = input.toCharArray();
-        StringBuffer output = new StringBuffer();
+        StringBuilder output = new StringBuilder();
         for (int i = 0; i < charInput.length; i++){
             char keyChar =  key.charAt(i%key.length());
             for (int j = 0; j < table.length; j++){
