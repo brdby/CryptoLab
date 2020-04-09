@@ -1,6 +1,9 @@
-package com.haskellish;
+package com.haskellish.XOR;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.Arrays;
+import java.util.EventListener;
 
 public class XORCipher {
 
@@ -10,6 +13,9 @@ public class XORCipher {
     public static void main(String[] args) {
         if (args.length > 1) System.out.println(XORCipher.crypt(args[0], Arrays.copyOfRange(args, 1, args.length)));
         else System.out.println("Wrong args");
+        EventQueue.invokeLater(() -> {
+            JFrame Frame = new JXORFrame("Test");
+        });
     }
 
     /**
