@@ -5,7 +5,7 @@
 
 Должна быть установлена JRE версии 8 и выше
 
-`java -jar *имя файла*.jar`
+`java -jar *имя файла*.jar аргументы...`
 
 ## Где скачать
 Все запускаемые файлы собраны во вкладке [releases](https://github.com/brdby/CryptoLab/releases)
