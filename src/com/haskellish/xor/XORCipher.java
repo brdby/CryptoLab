@@ -1,18 +1,13 @@
-package com.haskellish.XOR;
+package com.haskellish.xor;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Arrays;
-import java.util.EventListener;
 
 public class XORCipher {
 
-    /**
-     * @param args arg[0] - input text, other args - keys
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
-            JFrame Frame = new JXORFrame("Test");
+            JFrame Frame = new JXORFrame("XOR");
         });
     }
 
