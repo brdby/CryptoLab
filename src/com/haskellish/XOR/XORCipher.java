@@ -11,8 +11,6 @@ public class XORCipher {
      * @param args arg[0] - input text, other args - keys
      */
     public static void main(String[] args) {
-        if (args.length > 1) System.out.println(XORCipher.crypt(args[0], Arrays.copyOfRange(args, 1, args.length)));
-        else System.out.println("Wrong args");
         EventQueue.invokeLater(() -> {
             JFrame Frame = new JXORFrame("Test");
         });

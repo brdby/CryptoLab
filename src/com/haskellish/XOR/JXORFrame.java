@@ -15,14 +15,14 @@ public class JXORFrame extends JFrame {
         JLabel inputLabel = new JLabel("Input:", SwingConstants.CENTER);
         JLabel keysLabel = new JLabel("Keys (divide with spaces):", SwingConstants.CENTER);
         JButton crypt = new JButton("Crypt");
-        JLabel testLabel = new JLabel("TEST", SwingConstants.CENTER);
+        JLabel output = new JLabel("", SwingConstants.CENTER);
 
 
-        //setting fontsg
-        inputLabel.setFont(new Font("Verdana", Font.BOLD, 20));
-        keysLabel.setFont(new Font("Verdana", Font.BOLD, 20));
-        crypt.setFont(new Font("Verdana", Font.BOLD, 20));
-        testLabel.setFont(new Font("Verdana", Font.BOLD, 20));
+        //setting fonts
+        inputLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        keysLabel.setFont(new Font("Verdana", Font.BOLD, 15));
+        crypt.setFont(new Font("Verdana", Font.BOLD, 15));
+        output.setFont(new Font("Verdana", Font.BOLD, 15));
 
 
         // Creating panel
@@ -33,10 +33,17 @@ public class JXORFrame extends JFrame {
         contents.add(keysLabel);
         contents.add(keys);
         contents.add(crypt);
-        contents.add(testLabel);
+        contents.add(output);
+
+        //setting action listeners
+        crypt.addActionListener(event -> {
+            String inputStr = input.getText();
+            String[] keysArr = keys.getText().split(" ");
+            output.setText(XORCipher.crypt(inputStr, keysArr));
+        });
 
         setContentPane(contents);
-        setSize(400, 600);
+        setSize(800, 150);
         setVisible(true);
     }
 }
