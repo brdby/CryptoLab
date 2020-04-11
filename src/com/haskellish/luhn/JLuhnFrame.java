@@ -1,8 +1,5 @@
 package com.haskellish.luhn;
 
-import com.haskellish.xor.JXORFrame;
-import com.haskellish.xor.XORCipher;
-
 import javax.swing.*;
 import java.awt.*;
 

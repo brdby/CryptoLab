@@ -35,7 +35,7 @@ public class JXORFrame extends JFrame {
         contents.add(crypt);
         contents.add(output);
 
-        //setting action listeners
+        //setting action listener
         crypt.addActionListener(event -> {
             String inputStr = input.getText();
             String[] keysArr = keys.getText().split(" ");
