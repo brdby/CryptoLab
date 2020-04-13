@@ -53,7 +53,7 @@ public class JRSAFrame extends JFrame {
             }
         });
 
-        setSize(1400, 200);
+        setSize(1400, 300);
         setVisible(true);
     }
 }

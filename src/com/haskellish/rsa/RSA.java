@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class RSA {
 
-    private static int BIT_LENGTH = 32;
+    private static int BIT_LENGTH = 128;
 
     private BigInteger N;
     private BigInteger e;
@@ -19,7 +19,7 @@ public class RSA {
         });
     }
 
-    RSA() {
+    public RSA() {
         Random r = new Random();
         BigInteger p = BigInteger.probablePrime(BIT_LENGTH, r);
         BigInteger q = BigInteger.probablePrime(BIT_LENGTH, r);
